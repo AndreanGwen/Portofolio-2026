@@ -1,7 +1,7 @@
 "use client";
-import ContactIcon from "@/app/Common/ContactIcon/contactIcon";
-import ContactText from "@/app/Common/ContactText/contactText";
-import Navbar from "@/app/Common/Navbar/navbar";
+import ContactIcon from "@/Common/ContactIcon/contactIcon";
+import ContactText from "@/Common/ContactText/contactText";
+import Navbar from "@/Common/Navbar/navbar";
 import Image from "next/image";
 import Link from "next/link";
 import { SiGithub, SiGmail, SiInstagram } from "react-icons/si";
