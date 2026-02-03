@@ -6,20 +6,22 @@ import Image from "next/image";
 import Link from "next/link";
 import { SiGithub, SiGmail, SiInstagram } from "react-icons/si";
 import { easeInOut, motion } from "motion/react";
+import Typewriter from "typewriter-effect";
+import { delay } from "motion";
 
 const HomePage = () => {
   return (
     <>
       <div
-        className={`bg-[#f3f3f3] w-full min-h-dvh flex flex-col items-center`}
+        className={`bg-[#f3f3f3] w-full min-h-dvh flex flex-col items-center overflow-x-hidden`}
       >
         <Navbar />
 
         <div
-          className={`w-full flex md:justify-center md:items-center md:h-195 h-165`}
+          className={`w-full flex md:justify-center md:items-center md:h-195 h-165 px-4`}
         >
           <motion.div
-            className={`flex flex-col items-center justify-center gap-4 md:flex-row md:gap-9`}
+            className={`flex flex-col items-center justify-center gap-4 md:flex-row md:gap-9 w-full max-w-7xl`}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, ease: "easeInOut" }}
@@ -38,13 +40,28 @@ const HomePage = () => {
                   Andrean Gwen
                 </h1>
                 <p className={`md:text-xl font-bold pb-3`}>A Bit About Me</p>
-                <p className={`md:text-md text-sm text-black/60`}>
-                  I am a Computer Science student with a strong interest in Web
-                  Development. I have experience building web applications using
-                  modern technologies and a basic understanding of IoT
-                  development, particularly in integrating hardware with
-                  microcontroller-based systems.
-                </p>
+                <div className={`md:text-md text-sm text-black/60 min-h-18`}>
+                  <Typewriter
+                    options={{ delay: 30 }}
+                    onInit={(typewriter) => {
+                      typewriter
+                        .typeString(
+                          "I am a Computer Science student with a strong interest in Web Development. "
+                        )
+                        .pauseFor(800)
+                        .typeString(
+                          "I have experience building web applications using modern technologies and a "
+                        )
+                        .pauseFor(800)
+                        .typeString(
+                          "basic understanding of IoT development, particularly in integrating hardware "
+                        )
+                        .pauseFor(800)
+                        .typeString("with microcontroller-based systems.")
+                        .start();
+                    }}
+                  />
+                </div>
               </div>
 
               <div className="flex flex-row gap-2 pt-9 justify-center md:gap-4 md:pt-12 md:justify-start">
