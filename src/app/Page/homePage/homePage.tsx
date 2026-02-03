@@ -5,12 +5,9 @@ import Navbar from "@/app/Common/Navbar/navbar";
 import Image from "next/image";
 import Link from "next/link";
 import { SiGithub, SiGmail, SiInstagram } from "react-icons/si";
-import { useMediaQuery } from "react-responsive";
+import { easeInOut, motion } from "motion/react";
 
 const HomePage = () => {
-  const isMobile = useMediaQuery({
-    query: "(max-width: 767px)",
-  });
   return (
     <>
       <div
@@ -21,11 +18,14 @@ const HomePage = () => {
         <div
           className={`w-full flex md:justify-center md:items-center md:h-195 h-165`}
         >
-          <div
+          <motion.div
             className={`flex flex-col items-center justify-center gap-4 md:flex-row md:gap-9`}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, ease: "easeInOut" }}
           >
             <Image
-              src={`https://res.cloudinary.com/dgnnshujm/image/upload/v1768321572/Hermione_qt4m3l.jpg`}
+              src={`https://res.cloudinary.com/dgnnshujm/image/upload/v1770092003/83acb9985f7d3c106777048148026d3d_waifu2x_photo_noise3_scale_pm4e94.png`}
               alt={`main-photo`}
               width={400}
               height={400}
@@ -73,10 +73,16 @@ const HomePage = () => {
                 </Link>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
 
-        <div className="w-[95%] flex flex-col justify-center">
+        {/* Footer */}
+        <motion.div
+          className="w-[95%] flex flex-col justify-center"
+          initial={{ y: 100 }}
+          animate={{ y: 0 }}
+          transition={{ duration: 1, ease: easeInOut }}
+        >
           <h2 className="text-center font-semibold text-normal mb-4 md:hidden">
             Contact Me
           </h2>
@@ -124,7 +130,7 @@ const HomePage = () => {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </>
   );

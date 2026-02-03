@@ -1,6 +1,5 @@
 "use client";
 import Link from "next/link";
-import React from "react";
 import { useMediaQuery } from "react-responsive";
 import { Check, ChevronsUpDown } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -35,21 +34,25 @@ const frameworks = [
     label: "Resume",
   },
 ];
+import { useEffect, useState } from "react";
+import { easeInOut, motion } from "motion/react";
 
 const Navbar = () => {
+  const [open, setOpen] = useState(false);
+  const [value, setValue] = useState("");
+  const router = useRouter();
+
   const isMobile = useMediaQuery({
     query: "(max-width: 767px)",
   });
 
-  const [open, setOpen] = React.useState(false);
-  const [value, setValue] = React.useState("");
-
-  const router = useRouter();
-
   return (
     <>
-      <div
+      <motion.div
         className={`w-full h-11 flex items-center md:pr-9 md:pl-9 justify-between pr-4 pl-4`}
+        initial={{ y: -50 }}
+        animate={{ y: 0 }}
+        transition={{ duration: 1, ease: easeInOut }}
       >
         <div className={`flex gap-5 items-center w-full h-full`}>
           <div className={`flex items-center gap-2`}>
@@ -58,14 +61,9 @@ const Navbar = () => {
               Andrean Gwen
             </Link>
           </div>
-          <p className={`text-xs text-black/50 font-semibold`}>
-            {isMobile ? (
-              <>
-                Computer Science <br /> Student
-              </>
-            ) : (
-              `Computer Science Student`
-            )}
+          <p className="text-xs text-black/50 font-semibold">
+            <span className="block md:inline">Computer Science</span>{" "}
+            <span className="block md:inline">Student</span>
           </p>
         </div>
         {/* Desktop */}
@@ -147,7 +145,7 @@ const Navbar = () => {
             </PopoverContent>
           </Popover>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };
