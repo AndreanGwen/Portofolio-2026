@@ -1,7 +1,7 @@
 "use client";
 import ContactIcon from "@/Common/ContactIcon/ContactIcon";
 import ContactText from "@/Common/ContactText/ContactText";
-import Navbar from "@/Common/Navbar/Navbar";
+import Navbar from "@/Common/Navbar/navbar";
 import Image from "next/image";
 import Link from "next/link";
 import { SiGithub, SiGmail, SiInstagram } from "react-icons/si";
@@ -46,15 +46,15 @@ const HomePage = () => {
                     onInit={(typewriter) => {
                       typewriter
                         .typeString(
-                          "I am a Computer Science student with a strong interest in Web Development. ",
+                          "I am a Computer Science student with a strong interest in Web Development. "
                         )
                         .pauseFor(800)
                         .typeString(
-                          "I have experience building web applications using modern technologies and a ",
+                          "I have experience building web applications using modern technologies and a "
                         )
                         .pauseFor(800)
                         .typeString(
-                          "basic understanding of IoT development, particularly in integrating hardware ",
+                          "basic understanding of IoT development, particularly in integrating hardware "
                         )
                         .pauseFor(800)
                         .typeString("with microcontroller-based systems.")
