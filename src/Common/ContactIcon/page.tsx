@@ -1,2 +1,2 @@
-import ContactIcon from "./contactIcon";
+import ContactIcon from "./ContactIcon";
 export default ContactIcon;

@@ -1,2 +1,2 @@
-import ContactText from "./contactText";
+import ContactText from "./ContactText";
 export default ContactText;

@@ -1,7 +1,7 @@
 "use client";
-import ContactIcon from "@/Common/ContactIcon/contactIcon";
-import ContactText from "@/Common/ContactText/contactText";
-import Navbar from "@/Common/Navbar/navbar";
+import ContactIcon from "@/Common/ContactIcon/ContactIcon";
+import ContactText from "@/Common/ContactText/ContactText";
+import Navbar from "@/Common/Navbar/Navbar";
 import Image from "next/image";
 import Link from "next/link";
 import { SiGithub, SiGmail, SiInstagram } from "react-icons/si";
@@ -18,7 +18,7 @@ const HomePage = () => {
         <Navbar />
 
         <div
-          className={`w-full flex md:justify-center md:items-center md:h-195 h-165 px-4`}
+          className={`w-full flex-1 flex md:justify-center md:items-center md:min-h-195 min-h-165 px-4`}
         >
           <motion.div
             className={`flex flex-col items-center justify-center gap-4 md:flex-row md:gap-9 w-full max-w-7xl`}
@@ -46,15 +46,15 @@ const HomePage = () => {
                     onInit={(typewriter) => {
                       typewriter
                         .typeString(
-                          "I am a Computer Science student with a strong interest in Web Development. "
+                          "I am a Computer Science student with a strong interest in Web Development. ",
                         )
                         .pauseFor(800)
                         .typeString(
-                          "I have experience building web applications using modern technologies and a "
+                          "I have experience building web applications using modern technologies and a ",
                         )
                         .pauseFor(800)
                         .typeString(
-                          "basic understanding of IoT development, particularly in integrating hardware "
+                          "basic understanding of IoT development, particularly in integrating hardware ",
                         )
                         .pauseFor(800)
                         .typeString("with microcontroller-based systems.")
@@ -95,7 +95,7 @@ const HomePage = () => {
 
         {/* Footer */}
         <motion.div
-          className="w-[95%] flex flex-col justify-center"
+          className="w-full flex flex-col justify-center mt-auto px-4 md:px-6 lg:px-8"
           initial={{ y: 100 }}
           animate={{ y: 0 }}
           transition={{ duration: 1, ease: easeInOut }}
@@ -123,7 +123,7 @@ const HomePage = () => {
               />
             </div>
 
-            <div className="hidden md:flex items-center justify-between w-[95%] h-24 pt-2">
+            <div className="hidden md:flex flex-wrap items-center justify-between gap-4 md:gap-6 lg:gap-8 w-full  mx-auto min-h-24 py-4 pt-2">
               <ContactText
                 title="Email"
                 text="andreansatriya22@gmail.com"

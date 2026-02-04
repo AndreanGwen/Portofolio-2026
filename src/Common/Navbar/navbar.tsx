@@ -1,6 +1,5 @@
 "use client";
 import Link from "next/link";
-import { useMediaQuery } from "react-responsive";
 import { Check, ChevronsUpDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -16,6 +15,9 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
+import { useMediaQuery } from "react-responsive";
+import { easeInOut, motion } from "motion/react";
 const frameworks = [
   {
     value: "/about",
@@ -34,8 +36,6 @@ const frameworks = [
     label: "Resume",
   },
 ];
-import { useEffect, useState } from "react";
-import { easeInOut, motion } from "motion/react";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
