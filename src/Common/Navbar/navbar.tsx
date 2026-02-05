@@ -134,7 +134,7 @@ const Navbar = () => {
                             "ml-auto h-3 w-3",
                             value === framework.value
                               ? "opacity-100"
-                              : "opacity-0"
+                              : "opacity-0",
                           )}
                         />
                       </CommandItem>

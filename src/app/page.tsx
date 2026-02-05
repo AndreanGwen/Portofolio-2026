@@ -1,11 +1,11 @@
-import PageHead from "@/common/pagehead/Head";
-import HomePage from "@/page/homepage/Home";
+import PageHead from "@/Common/PageHead/Head";
+import HomePage from "@/Page/HomePage/Home";
 
 const Page = () => {
   return (
     <>
-      <PageHead title={`Home`} />
-      <HomePage />
+      <PageHead title={`Home`}></PageHead>
+      <HomePage></HomePage>
     </>
   );
 };
