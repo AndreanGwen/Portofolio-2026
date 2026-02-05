@@ -1,5 +1,5 @@
-import PageHead from "@/common/pageHead/Head";
-import HomePage from "@/page/homePage/Home";
+import PageHead from "@/common/page-head/Head";
+import HomePage from "@/page/home-page/Home";
 
 const Page = () => {
   return (
