@@ -13,7 +13,7 @@ export default function Project() {
     const fetchData = async () => {
       try {
         const url = process.env.NEXT_PUBLIC_PROJECT_LIST!;
-        const res = await axios.get(url + "project-list");
+        const res = await axios.get(`${url}/project-list`);
         setProjects(res.data.data);
       } catch (error) {
         console.error(error);
