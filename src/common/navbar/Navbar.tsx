@@ -20,6 +20,10 @@ import { useMediaQuery } from "react-responsive";
 import { easeInOut, motion } from "motion/react";
 const frameworks = [
   {
+    value: "/",
+    label: "Home",
+  },
+  {
     value: "/about",
     label: "About",
   },
