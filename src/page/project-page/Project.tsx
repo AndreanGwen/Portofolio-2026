@@ -1,6 +1,7 @@
 "use client";
 import CardCustom from "@/common/cardCustom/CardCustom";
 import Navbar from "@/common/navbar/Navbar";
+import { Skeleton } from "@/components/ui/skeleton";
 import axios from "axios";
 import Image from "next/image";
 import Link from "next/link";
@@ -45,7 +46,13 @@ export default function Project() {
               <CardCustom index={items._id} items={items} />
             ))
           ) : (
-            <>Loading</>
+            <div className="flex justify-center flex-wrap gap-8 w-full">
+              <Skeleton className="md:w-[356px] w-full h-44" />
+              <Skeleton className="md:w-[356px] w-full h-44" />
+              <Skeleton className="md:w-[356px] w-full h-44" />
+              <Skeleton className="md:w-[356px] w-full h-44" />
+              <Skeleton className="md:w-[356px] w-full h-44" />
+            </div>
           )}
         </div>
       </div>
