@@ -1,4 +1,5 @@
 "use client";
+import CardCustom from "@/common/cardCustom/CardCustom";
 import Navbar from "@/common/navbar/Navbar";
 import axios from "axios";
 import Image from "next/image";
@@ -23,8 +24,6 @@ export default function Project() {
     fetchData();
   }, []);
 
-  console.log(projects);
-
   return (
     <>
       <Navbar></Navbar>
@@ -39,61 +38,11 @@ export default function Project() {
         </div>
 
         <div
-          className={`w-full h-fit pr-24 pl-24 pt-7 flex flex-wrap justify-between`}
+          className={`w-full h-fit md:pr-22 md:pl-22 pr-6 pl-6 pt-7 flex flex-wrap gap-8 justify-center`}
         >
           {projects.length != 0 ? (
-            projects.map((items: any, index: any) => (
-              <div
-                key={index}
-                className="group w-96 h-44 border-2 border-b-8 border-blue-950 rounded-xl relative overflow-hidden"
-              >
-                <Image
-                  alt="img-project"
-                  src={items?.projectImage}
-                  fill
-                  className="object-cover"
-                />
-
-                <Link
-                  href={items?.projectLink}
-                  className="absolute right-1 top-1 hidden w-9 h-9 bg-[#80d8da] rounded-full group-hover:flex justify-center items-center border-2 border-blue-950"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FiGithub size={20} />
-                </Link>
-
-                <div
-                  className="
-                absolute bottom-0 left-0 w-full
-                bg-[#80d8da]
-                z-10
-                flex flex-col
-                px-3
-                border-t-2 border-blue-950
-                transition-all duration-300
-                h-10 pt-1.5
-                group-hover:h-20 
-              "
-                >
-                  <h1 className="text-black text-md font-semibold">
-                    {items?.projectName}
-                  </h1>
-
-                  <p
-                    className="
-                  text-xs text-black
-                  opacity-0
-                  translate-y-2
-                  transition-all duration-300
-                  group-hover:opacity-100
-                  group-hover:translate-y-0
-                "
-                  >
-                    {items?.projectDetail}
-                  </p>
-                </div>
-              </div>
+            projects.map((items: any) => (
+              <CardCustom index={items._id} items={items} />
             ))
           ) : (
             <>Loading</>
