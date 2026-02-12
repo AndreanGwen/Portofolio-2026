@@ -43,7 +43,7 @@ export default function Project() {
       <PageHead />
       <Navbar></Navbar>
       <div className={`flex flex-col items-center pt-10 pb-16 md:pb-0`}>
-        <div className={`text-3xl font-bold pb-8`}>It's My Projects</div>
+        <div className={`text-3xl font-bold md:pb-8`}>It's My Projects</div>
 
         <div
           className={`p-2 border-2 rounded-md border-blue-950 border-b-8 border-r-8 md:block hidden`}
@@ -57,7 +57,7 @@ export default function Project() {
           />
         </div>
 
-        <div className={`flex pt-10 gap-9 text-black/50 font-semibold`}>
+        <div className={`flex md:pt-10 gap-9 text-black/50 font-semibold pt-7`}>
           <span
             className={`hover:text-black cursor-pointer`}
             onClick={() => {
