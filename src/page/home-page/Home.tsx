@@ -13,7 +13,7 @@ const HomePage = () => {
   return (
     <>
       <div
-        className={`bg-[#f3f3f3] w-full min-h-dvh flex flex-col items-center overflow-x-hidden`}
+        className={` w-full min-h-dvh flex flex-col items-center overflow-x-hidden`}
       >
         <Navbar />
 
@@ -66,25 +66,25 @@ const HomePage = () => {
 
               <div className="flex flex-row gap-2 pt-9 justify-center md:gap-4 md:pt-12 md:justify-start">
                 <Link href="/about">
-                  <div className="w-16 h-16 md:w-20 md:h-20 bg-[#80d8da] rounded-full flex items-center justify-center font-semibold border border-black hover:bg-black/80 hover:text-white hover:border-white transition-transform hover:scale-105 text-xs md:text-[13px]">
+                  <div className="w-16 h-16 md:w-20 md:h-20 bg-[#f9f4e7] rounded-full flex items-center justify-center font-semibold transition-transform hover:scale-105 text-xs md:text-[13px]">
                     About
                   </div>
                 </Link>
 
                 <Link href="/education">
-                  <div className="w-16 h-16 md:w-20 md:h-20 bg-black rounded-full flex items-center justify-center text-white font-semibold border border-white hover:bg-white hover:text-black hover:border-black transition-transform hover:scale-105 text-xs md:text-[13px]">
+                  <div className="w-16 h-16 md:w-20 md:h-20 bg-[#ffebec] rounded-full flex items-center justify-center font-semibold transition-transform hover:scale-105 text-xs md:text-[13px]">
                     Education
                   </div>
                 </Link>
 
                 <Link href="/project">
-                  <div className="w-16 h-16 md:w-20 md:h-20 bg-[#80d8da] rounded-full flex items-center justify-center font-semibold border border-black hover:bg-black/80 hover:text-white hover:border-white transition-transform hover:scale-105 text-xs md:text-[13px]">
+                  <div className="w-16 h-16 md:w-20 md:h-20 bg-[#ebf4fa] rounded-full flex items-center justify-center font-semibold transition-transform hover:scale-105 text-xs md:text-[13px]">
                     Project
                   </div>
                 </Link>
 
                 <Link href="/resume">
-                  <div className="w-16 h-16 md:w-20 md:h-20 bg-black rounded-full flex items-center justify-center text-white font-semibold border border-white hover:bg-white hover:text-black hover:border-black transition-transform hover:scale-105 text-xs md:text-[13px]">
+                  <div className="w-16 h-16 md:w-20 md:h-20 bg-[#eaf8f4] rounded-full flex items-center justify-center font-semibold transition-transform hover:scale-105 text-xs md:text-[13px]">
                     Resume
                   </div>
                 </Link>

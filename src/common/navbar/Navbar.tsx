@@ -60,7 +60,7 @@ const Navbar = () => {
       >
         <div className={`flex gap-5 items-center w-full h-full`}>
           <div className={`flex items-center gap-2`}>
-            <div className={`w-6 h-6 bg-[#80d8da] rounded-full`}></div>
+            <div className={`w-6 h-6 bg-[#b6dfb6] rounded-full`}></div>
             <Link href={`/`} className={`font-bold text-xl hidden md:block`}>
               Andrean Gwen
             </Link>
@@ -72,29 +72,29 @@ const Navbar = () => {
         </div>
         {/* Desktop */}
         <div
-          className={`md:flex items-center divide-x divide-gray-300 text-sm text-gray-600 hidden`}
+          className={`md:flex items-center text-sm text-gray-600 hidden gap-2`}
         >
           <Link
             href={`/about`}
-            className={`px-3 hover:text-black hover:underline underline-offset-4`}
+            className={`px-3 hover:text-black bg-[#eaf8f4] rounded-xl hover:scale-105 transition-transform`}
           >
             About
           </Link>
           <Link
             href={`/education`}
-            className={`px-3 hover:text-black hover:underline underline-offset-4`}
+            className={`px-3 bg-[#f7f2e9] hover:text-black rounded-xl hover:scale-105 transition-transform`}
           >
             Education
           </Link>
           <Link
             href={`/project`}
-            className={`px-3 hover:text-black hover:underline underline-offset-4`}
+            className={`px-3 bg-[#edf1f0] hover:text-black rounded-xl hover:scale-105 transition-transform`}
           >
             Project
           </Link>
           <Link
             href={`/resume`}
-            className={`px-3 hover:text-black hover:underline underline-offset-4`}
+            className={`px-3 bg-[#e0eee0] hover:text-black rounded-xl hover:scale-105 transition-transform`}
           >
             Resume
           </Link>

@@ -4,7 +4,7 @@ import HomePage from "@/page/home-page/Home";
 const Page = () => {
   return (
     <>
-      <PageHead title={`Home`}></PageHead>
+      <PageHead></PageHead>
       <HomePage></HomePage>
     </>
   );

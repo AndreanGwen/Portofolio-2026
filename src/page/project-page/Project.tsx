@@ -1,6 +1,7 @@
 "use client";
 import CardCustom from "@/common/cardCustom/CardCustom";
 import Navbar from "@/common/navbar/Navbar";
+import PageHead from "@/common/page-head/Head";
 import { Skeleton } from "@/components/ui/skeleton";
 import axios from "axios";
 import { useEffect, useState } from "react";
@@ -39,6 +40,7 @@ export default function Project() {
 
   return (
     <>
+      <PageHead />
       <Navbar></Navbar>
       <div className={`flex flex-col items-center pt-10 pb-16 md:pb-0`}>
         <div className={`text-3xl font-bold pb-8`}>It's My Projects</div>

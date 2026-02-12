@@ -1,12 +1,24 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FiGithub } from "react-icons/fi";
+import { motion } from "motion/react";
 
 const CardCustom = (props: any) => {
   const { items } = props;
 
   return (
-    <div
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+      variants={{
+        hidden: { opacity: 0, y: 15 },
+        visible: {
+          opacity: 1,
+          y: 0,
+          transition: { duration: 0.6, ease: "easeOut" },
+        },
+      }}
       tabIndex={0}
       className="
         group
@@ -32,7 +44,7 @@ const CardCustom = (props: any) => {
         className="
           absolute right-1 top-1
           hidden w-9 h-9
-          bg-[#80d8da]
+          bg-[#9dc8db]
           rounded-full
           border-2 border-blue-950
           justify-center items-center
@@ -47,7 +59,7 @@ const CardCustom = (props: any) => {
       <div
         className="
           absolute bottom-0 left-0 w-full
-          bg-[#80d8da]
+          bg-[#9dc8db]
           z-10
           flex flex-col
           px-3
@@ -81,7 +93,7 @@ const CardCustom = (props: any) => {
           {items?.projectDetail}
         </p>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
