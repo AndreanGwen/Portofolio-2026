@@ -40,7 +40,9 @@ const HomePage = () => {
                   Andrean Gwen
                 </h1>
                 <p className={`md:text-xl font-bold pb-3`}>A Bit About Me</p>
-                <div className={`md:text-md text-sm text-black/60 min-h-18`}>
+                <div
+                  className={`md:text-md text-sm text-black/60 min-h-18 font-light`}
+                >
                   <Typewriter
                     options={{ delay: 30 }}
                     onInit={(typewriter) => {
@@ -66,25 +68,25 @@ const HomePage = () => {
 
               <div className="flex flex-row gap-2 pt-9 justify-center md:gap-4 md:pt-12 md:justify-start">
                 <Link href="/about">
-                  <div className="w-16 h-16 md:w-20 md:h-20 bg-[#f9f4e7] rounded-full flex items-center justify-center font-semibold transition-transform hover:scale-105 text-xs md:text-[13px]">
+                  <div className="w-16 h-16 md:w-24 md:h-16 rounded-md bg-[#f9f4e7]  flex items-center justify-center font-semibold transition-transform hover:scale-105 text-xs md:text-[13px]">
                     About
                   </div>
                 </Link>
 
                 <Link href="/education">
-                  <div className="w-16 h-16 md:w-20 md:h-20 bg-[#ffebec] rounded-full flex items-center justify-center font-semibold transition-transform hover:scale-105 text-xs md:text-[13px]">
+                  <div className="w-16 h-16 md:w-24 md:h-16 rounded-md bg-[#ffebec] flex items-center justify-center font-semibold transition-transform hover:scale-105 text-xs md:text-[13px]">
                     Education
                   </div>
                 </Link>
 
                 <Link href="/project">
-                  <div className="w-16 h-16 md:w-20 md:h-20 bg-[#ebf4fa] rounded-full flex items-center justify-center font-semibold transition-transform hover:scale-105 text-xs md:text-[13px]">
+                  <div className="w-16 h-16 md:w-24 md:h-16 rounded-md bg-[#ebf4fa]  flex items-center justify-center font-semibold transition-transform hover:scale-105 text-xs md:text-[13px]">
                     Project
                   </div>
                 </Link>
 
                 <Link href="/resume">
-                  <div className="w-16 h-16 md:w-20 md:h-20 bg-[#eaf8f4] rounded-full flex items-center justify-center font-semibold transition-transform hover:scale-105 text-xs md:text-[13px]">
+                  <div className="w-16 h-16 md:w-24 md:h-16 rounded-md bg-[#eaf8f4]  flex items-center justify-center font-semibold transition-transform hover:scale-105 text-xs md:text-[13px]">
                     Resume
                   </div>
                 </Link>
