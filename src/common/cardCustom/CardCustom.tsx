@@ -22,7 +22,7 @@ const CardCustom = (props: any) => {
       tabIndex={0}
       className="
         group
-        md:w-[356px] w-full h-44
+        md:w-89 w-full h-44
         border-2 border-b-8 border-blue-950
         rounded-xl
         relative overflow-hidden
