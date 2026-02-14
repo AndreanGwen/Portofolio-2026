@@ -3,13 +3,18 @@ import Image from "next/image";
 import Capsul from "@/common/capsul/Capsul";
 import { easeInOut, motion } from "motion/react";
 import ImageHome from "@/common/imageHome/imageHome";
+import { FaProjectDiagram, FaUser } from "react-icons/fa";
+import Link from "next/link";
+import CardLink from "@/common/cardLink/CardLink";
+import { GiBrain } from "react-icons/gi";
+import { IoNewspaper } from "react-icons/io5";
 
 const HomePage = () => {
   return (
     <div className={`flex justify-center`}>
       <div className={`md:w-2/5 w-full min-h-dvh flex flex-col items-center`}>
         <motion.div
-          className="w-full h-36 flex items-center md:pr-0 md:pl-0 pr-5 pl-5 sticky top-0 z-50 bg-white/95"
+          className="w-full h-28 flex items-center md:pr-0 md:pl-0 pr-5 pl-5 sticky top-0 z-50 bg-white/95"
           initial={{ y: -50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{
@@ -70,6 +75,54 @@ const HomePage = () => {
             </h1>
 
             <ImageHome />
+          </div>
+
+          <div className={`pt-8`}>
+            <div className={`flex flex-col text-black/80`}>
+              <h2 className={`text-3xl font-bold`}>Implementation.</h2>
+              <p className={`text-sm`}>from writing, to achievement.</p>
+            </div>
+
+            <div
+              className={`pt-6 flex w-full md:justify-between flex-wrap gap-y-3 pb-10 border-b items-center`}
+            >
+              <CardLink
+                icons={<FaUser size={25} color="#415942" />}
+                title="About Me, Heyy."
+                desc="Let me introduce my self."
+                url="/about"
+                bgPrimary="bg-[#f7f2e9]"
+                bgSecond="bg-[#f1e3c8]"
+              />
+              <CardLink
+                icons={<FaProjectDiagram size={25} color="#f28485" />}
+                title="Let's see the Project."
+                desc="Let me introduce an interesting project."
+                url="/project"
+                bgPrimary="bg-[#ffebec]"
+                bgSecond="bg-[#ffe7e6]"
+              />
+              <CardLink
+                icons={<GiBrain size={25} color="#415942" />}
+                title="My Education."
+                desc="Let me show my achievement."
+                url="/education"
+                bgPrimary="bg-[#dceafa9c]"
+                bgSecond="bg-[#ccdeee]"
+              />
+              <CardLink
+                icons={<IoNewspaper size={25} color="#6d9c83" />}
+                title="My Resume?"
+                desc="Come check my Resume."
+                url="/resume"
+                bgPrimary="bg-[#eaf8f4]"
+                bgSecond="bg-[#d1e3e3]"
+              />
+            </div>
+          </div>
+
+          <div className={`pt-4 pb-4 text-center text-xs text-black/50`}>
+            <p>Copyright &copy; Andrean Gwen</p>
           </div>
         </motion.div>
       </div>
