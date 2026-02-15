@@ -3,15 +3,59 @@ import Image from "next/image";
 import Capsul from "@/common/capsul/Capsul";
 import { easeInOut, motion } from "motion/react";
 import ImageHome from "@/common/imageHome/imageHome";
-import { FaProjectDiagram, FaUser } from "react-icons/fa";
-import Link from "next/link";
+import { FaInstagram, FaProjectDiagram, FaUser } from "react-icons/fa";
 import CardLink from "@/common/cardLink/CardLink";
 import { GiBrain } from "react-icons/gi";
 import { IoNewspaper } from "react-icons/io5";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
+import { FiGithub } from "react-icons/fi";
 
 const HomePage = () => {
   return (
     <div className={`flex justify-center`}>
+      <Dialog>
+        <DialogTrigger asChild>
+          <Button
+            variant="outline"
+            className={`bottom-10 fixed rounded-full z-30 bg-[#374151] text-white md:w-32 cursor-pointer`}
+          >
+            Connect
+          </Button>
+        </DialogTrigger>
+        <DialogContent className="w-xs">
+          <DialogHeader>
+            <DialogTitle>Connect with me</DialogTitle>
+            <DialogDescription className={`pr-5 pl-5`}>
+              <a
+                href="https://www.instagram.com/andreangwen/"
+                className={`flex items-center gap-2 pt-4 text-black text-[15px] hover:underline underline-offset-4`}
+                target="_blank"
+              >
+                <FaInstagram size={20} />
+                <p>Instagram</p>
+              </a>
+
+              <a
+                href="https://github.com/AndreanGwen"
+                className={`flex items-center gap-2 pt-5 text-black text-[15px] hover:underline underline-offset-4`}
+                target="_blank"
+              >
+                <FiGithub size={20} />
+                <p>Github</p>
+              </a>
+            </DialogDescription>
+          </DialogHeader>
+        </DialogContent>
+      </Dialog>
+
       <div className={`md:w-2/5 w-full min-h-dvh flex flex-col items-center`}>
         <motion.div
           className="w-full h-28 flex items-center md:pr-0 md:pl-0 pr-5 pl-5 sticky top-0 z-50 bg-white/95"
