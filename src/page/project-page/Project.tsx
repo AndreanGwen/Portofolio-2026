@@ -42,7 +42,7 @@ export default function Project() {
     <>
       <PageHead />
       <Navbar></Navbar>
-      <div className={`flex flex-col items-center pt-10 pb-16 md:pb-0`}>
+      <div className={`flex flex-col items-center pt-10 pb-16 md:pb-0 `}>
         <div className={`text-3xl font-bold md:pb-8`}>It's My Projects</div>
 
         <div

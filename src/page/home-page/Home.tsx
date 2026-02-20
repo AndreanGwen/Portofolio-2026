@@ -56,7 +56,7 @@ const HomePage = () => {
         </DialogContent>
       </Dialog>
 
-      <div className={`md:w-2/5 w-full min-h-dvh flex flex-col items-center`}>
+      <div className={`md:w-2/5 w-full min-h-dvh flex flex-col items-center]`}>
         <motion.div
           className="w-full h-28 flex items-center md:pr-0 md:pl-0 pr-5 pl-5 sticky top-0 z-50 bg-white/95"
           initial={{ y: -50, opacity: 0 }}

@@ -60,7 +60,7 @@ const Navbar = () => {
       >
         <div className={`flex gap-5 items-center w-full h-full`}>
           <div className={`flex items-center gap-2`}>
-            <div className={`w-6 h-6 bg-[#b6dfb6] rounded-full`}></div>
+            <div className={`w-6 h-6 bg-[#dceafa] rounded-full`}></div>
             <Link href={`/`} className={`font-bold text-xl hidden md:block`}>
               Andrean Gwen
             </Link>
@@ -138,7 +138,7 @@ const Navbar = () => {
                             "ml-auto h-3 w-3",
                             value === framework.value
                               ? "opacity-100"
-                              : "opacity-0",
+                              : "opacity-0"
                           )}
                         />
                       </CommandItem>

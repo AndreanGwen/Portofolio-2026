@@ -1,15 +1,42 @@
+"use client";
+import CardEducation from "@/common/cardEducation/CardEducation";
 import Navbar from "@/common/navbar/Navbar";
+import axios from "axios";
+import { useEffect, useState } from "react";
 
 const Education = () => {
+  const [educations, setEducations] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const url = process.env.NEXT_PUBLIC_PROJECT_LIST;
+        const res = await axios.get(`${url}/education-list`);
+
+        console.log(res);
+
+        setEducations(res.data.data);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   return (
-    <div className={`w-full`}>
+    <div className={`w-full `}>
       <Navbar></Navbar>
       <div className={`flex flex-col items-center pt-10 pb-16 md:pb-0`}>
-        <span className={`text-3xl font-bold md:pb-8`}>My Education</span>
+        <span className={`text-3xl font-bold pb-10`}>My Education</span>
 
         <div
-          className={`h-40 w-[288px] border-2 rounded-md border-blue-950 border-b-8`}
-        ></div>
+          className={`w-full h-fit md:pr-22 md:pl-22 pr-6 pl-6 flex flex-wrap gap-8 justify-center`}
+        >
+          {educations.map((items: any) => (
+            <CardEducation items={items} key={items.id} />
+          ))}
+        </div>
       </div>
     </div>
   );
