@@ -29,10 +29,10 @@ const Education = () => {
     <div className={`w-full `}>
       <Navbar></Navbar>
       <div className={`flex flex-col items-center pt-10 pb-16 md:pb-0`}>
-        <span className={`text-3xl font-bold pb-10`}>My Education</span>
+        <span className={`text-3xl font-bold pb-10`}>🎓My Education</span>
 
         <div
-          className={`w-full h-fit md:pr-22 md:pl-22 pr-6 pl-6 flex flex-wrap gap-8 justify-center`}
+          className={`w-full h-fit md:pr-22 md:pl-22 pr-6 pl-6 flex flex-wrap gap-4 justify-center`}
         >
           {educations.length != 0 ? (
             educations.map((items: any) => (
