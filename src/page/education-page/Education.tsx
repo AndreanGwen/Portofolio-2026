@@ -1,6 +1,7 @@
 "use client";
 import CardEducation from "@/common/cardEducation/CardEducation";
 import Navbar from "@/common/navbar/Navbar";
+import { Skeleton } from "@/components/ui/skeleton";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
@@ -33,9 +34,22 @@ const Education = () => {
         <div
           className={`w-full h-fit md:pr-22 md:pl-22 pr-6 pl-6 flex flex-wrap gap-8 justify-center`}
         >
-          {educations.map((items: any) => (
-            <CardEducation items={items} key={items.id} />
-          ))}
+          {educations.length != 0 ? (
+            educations.map((items: any) => (
+              <CardEducation key={items._id} items={items} />
+            ))
+          ) : (
+            <div className="flex justify-center flex-wrap gap-8 w-full">
+              <Skeleton className="h-40 w-[288px]" />
+              <Skeleton className="h-40 w-[288px]" />
+              <Skeleton className="h-40 w-[288px]" />
+              <Skeleton className="h-40 w-[288px]" />
+              <Skeleton className="h-40 w-[288px]" />
+              <Skeleton className="h-40 w-[288px]" />
+              <Skeleton className="h-40 w-[288px]" />
+              <Skeleton className="h-40 w-[288px]" />
+            </div>
+          )}
         </div>
       </div>
     </div>
