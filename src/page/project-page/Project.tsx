@@ -82,6 +82,14 @@ export default function Project() {
           >
             IOT
           </span>
+          <span
+            className={`hover:text-black cursor-pointer`}
+            onClick={() => {
+              fetchProject("AI");
+            }}
+          >
+            AI
+          </span>
         </div>
 
         <div
