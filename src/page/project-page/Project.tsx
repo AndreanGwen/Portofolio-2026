@@ -3,6 +3,7 @@ import Navbar from "@/common/navbar/Navbar";
 import PageHead from "@/common/page-head/Head";
 import { useEffect, useState } from "react";
 import projectData from "../../../public/dataProject.json";
+import { motion } from "motion/react";
 
 type Project = {
   projectName: string;
@@ -34,7 +35,12 @@ export default function Project() {
     <>
       <PageHead />
       <Navbar />
-      <main className="min-h-screen bg-white text-[#111]">
+      <motion.main
+        className="min-h-screen bg-white text-[#111]"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+      >
         {/* Hero Section */}
         <section className="md:pt-24 pt-16 pb-12 px-6 md:px-12 lg:px-20 border-b border-[#e8e8e8]">
           <div className="max-w-6xl mx-auto">
@@ -80,7 +86,7 @@ export default function Project() {
         <section className="px-6 md:px-12 lg:px-20 py-12">
           <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filtered.map((project, index) => (
-              <a
+              <motion.a
                 key={index}
                 href={project.projectLink}
                 target="_blank"
@@ -92,6 +98,10 @@ export default function Project() {
                     ? "border-[#bbb] -translate-y-1 shadow-[0_12px_32px_rgba(0,0,0,0.08)]"
                     : "border-[#ebebeb]"
                 }`}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
               >
                 {/* Image */}
                 <div className="relative overflow-hidden h-48 bg-[#f0f0f0]">
@@ -118,7 +128,7 @@ export default function Project() {
                     </h2>
                     {/* Arrow icon */}
                     <svg
-                      className={`w-4 h-4 flex-shrink-0 transition-all duration-200 mt-0.5 ${
+                      className={`w-4 h-4 shrink-0 transition-all duration-200 mt-0.5 ${
                         hoveredIndex === index
                           ? "text-[#111] translate-x-0.5 -translate-y-0.5"
                           : "text-[#ccc]"
@@ -153,7 +163,7 @@ export default function Project() {
                     </span>
                   </div>
                 </div>
-              </a>
+              </motion.a>
             ))}
           </div>
 
@@ -163,7 +173,7 @@ export default function Project() {
             </div>
           )}
         </section>
-      </main>
+      </motion.main>
     </>
   );
 }
