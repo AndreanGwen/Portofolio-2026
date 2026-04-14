@@ -1,0 +1,37 @@
+[
+  {
+    "projectName": "ESP32 Website Smart Car",
+    "projectCategory": "IOT",
+    "projectDetail": "Make a smart car using the esp32 microcontroller base, controlled via the website.",
+    "projectImage": "https://res.cloudinary.com/dgnnshujm/image/upload/v1770268741/WEBSITE_CONTROLLING_SMART_CAR_l36yku.png",
+    "projectLink": "https://github.com/AndreanGwen/IOT_Development.git"
+  },
+  {
+    "projectName": "Scrapping Movie Data",
+    "projectCategory": "WEBSITE",
+    "projectDetail": "Scraping movie data using the JavaScript programming language, with a ReactJS front end. Data is retrieved from a specific website.",
+    "projectImage": "https://res.cloudinary.com/dgnnshujm/image/upload/v1770816442/WEB_PORTO_5_j1xkwz.png",
+    "projectLink": "https://github.com/AndreanGwen/fe-otakunime.git"
+  },
+  {
+    "projectName": "Weather Website With API",
+    "projectCategory": "WEBSITE",
+    "projectDetail": "Create a website to view the temperature of a region/country using API.",
+    "projectImage": "https://res.cloudinary.com/dgnnshujm/image/upload/v1770459065/Weather_App_With_API_fi2q2a.png",
+    "projectLink": "https://github.com/AndreanGwen/Weather-App-Realtime.git"
+  },
+  {
+    "projectName": "CRUD + Payment Gateway with MidTrans",
+    "projectCategory": "WEBSITE",
+    "projectDetail": "Create a simple CRUD website. Login, register, add, update, delete, and payment gateway API using Midtrans.",
+    "projectImage": "https://res.cloudinary.com/dgnnshujm/image/upload/v1770460340/Desain_tanpa_judul_1_zjvvjw.png",
+    "projectLink": "https://github.com/AndreanGwen/fe-gudang.git"
+  },
+  {
+    "projectName": "Website search movie with API OMDB",
+    "projectCategory": "WEBSITE",
+    "projectDetail": "Website to search for movies using OMDB API.",
+    "projectImage": "https://res.cloudinary.com/dgnnshujm/image/upload/v1770458317/Desain_tanpa_judul_tdwju2.png",
+    "projectLink": "https://github.com/AndreanGwen/Movie-webPractice.git"
+  }
+]

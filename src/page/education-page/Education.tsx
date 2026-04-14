@@ -29,7 +29,10 @@ const Education = () => {
     <div className={`w-full `}>
       <Navbar></Navbar>
       <div className={`flex flex-col items-center pt-10 pb-16 md:pb-0`}>
-        <span className={`text-3xl font-bold pb-10`}>🎓My Education</span>
+        <div className={`text-3xl font-bold flex flex-col gap-2 pb-8 md:pb-0`}>
+          <div className={``}>🎓My Education</div>
+          <div className={`w-44 border-t-2 border-black/30 md:pb-8`}></div>
+        </div>
 
         <div
           className={`w-full h-fit md:pr-22 md:pl-22 pr-6 pl-6 flex flex-wrap gap-4 justify-center`}
