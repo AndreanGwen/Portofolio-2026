@@ -93,7 +93,7 @@ export default function Project() {
                 rel="noopener noreferrer"
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
-                className={`group block rounded-2xl border overflow-hidden transition-all duration-300 bg-[#fafafa] ${
+                className={`group block rounded-2xl border overflow-hidden transition-all duration-300 bg-[#fafafa] border-black/25 ${
                   hoveredIndex === index
                     ? "border-[#bbb] -translate-y-1 shadow-[0_12px_32px_rgba(0,0,0,0.08)]"
                     : "border-[#ebebeb]"
