@@ -33,5 +33,12 @@
     "projectDetail": "Website to search for movies using OMDB API.",
     "projectImage": "https://res.cloudinary.com/dgnnshujm/image/upload/v1770458317/Desain_tanpa_judul_tdwju2.png",
     "projectLink": "https://github.com/AndreanGwen/Movie-webPractice.git"
+  },
+  {
+    "projectName": "Country Website Search",
+    "projectCategory": "WEBSITE",
+    "projectDetail": "This website was created to search and filter countries. It's also the final project of the BNCC (Bina Nusantara Computer Club).",
+    "projectImage": "https://res.cloudinary.com/dgnnshujm/image/upload/v1776187395/WEB_BNCC_knr7n7.png",
+    "projectLink": "https://world-university-omega.vercel.app/"
   }
 ]

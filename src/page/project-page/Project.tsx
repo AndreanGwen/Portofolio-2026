@@ -101,7 +101,7 @@ export default function Project() {
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, ease: "easeOut" }}
+                transition={{ duration: 1 }}
               >
                 {/* Image */}
                 <div className="relative overflow-hidden h-48 bg-[#f0f0f0]">
