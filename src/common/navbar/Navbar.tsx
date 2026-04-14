@@ -53,7 +53,7 @@ const Navbar = () => {
   return (
     <>
       <motion.div
-        className={`w-full h-11 flex items-center md:pr-9 md:pl-9 justify-between pr-4 pl-4`}
+        className={`w-full h-11 flex items-center md:pr-9 md:pl-9 justify-between pr-4 pl-4 fixed z-20 bg-white/95`}
         initial={{ y: -50 }}
         animate={{ y: 0 }}
         transition={{ duration: 1, ease: easeInOut }}
